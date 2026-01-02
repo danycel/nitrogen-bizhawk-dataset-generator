@@ -1,5 +1,14 @@
 # NitroGen BizHawk Dataset Generator
 
+[![Lua CI](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/lua-ci.yml/badge.svg)](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/lua-ci.yml)
+[![Python CI](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/python-ci.yml/badge.svg)](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/python-ci.yml)
+[![Docker Build](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/actions/workflows/docker-ci.yml)
+[![License](https://img.shields.io/github/license/artryazanov/nitrogen-bizhawk-dataset-generator)](LICENSE)
+![Lua](https://img.shields.io/badge/Lua-5.4-blue)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/artryazanov/nitrogen-bizhawk-dataset-generator)
+[![GitHub issues](https://img.shields.io/github/issues/artryazanov/nitrogen-bizhawk-dataset-generator)](https://github.com/artryazanov/nitrogen-bizhawk-dataset-generator/issues)
+
 This project provides tools to create training datasets for [NitroGen](https://huggingface.co/nvidia/NitroGen) using the [BizHawk](https://tasvideos.org/BizHawk) emulator.
 
 It consists of two parts:
@@ -8,7 +17,7 @@ It consists of two parts:
 
 ## Prerequisites
 
-- **BizHawk Emulator** (Version 2.8+ recommended)
+- **BizHawk Emulator** (Version 2.9+ recommended)
 - **Python 3.8+**
 - **Git** (optional, for cloning)
 
