@@ -3,7 +3,9 @@ local lu = require('tests.luaunit')
 
 -- --- MOCKS ---
 -- Mock BizHawk globals: emu, joypad, client, movie, console, os (partially)
-emu = {}
+emu = {
+    getsystemid = function() return "SNES" end -- Default for loading
+}
 joypad = {}
 client = {}
 movie = {}
