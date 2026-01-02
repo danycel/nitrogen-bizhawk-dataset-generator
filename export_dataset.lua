@@ -151,7 +151,7 @@ local function get_nitrogen_input(system_id)
         -- Try to map common names 
         south = bool_to_int(pad["A"]) -- Often primary
         east  = bool_to_int(pad["B"])
-        west  = bool_to_int(pad["C"]) -- Genesis?
+        west  = bool_to_int(pad["C"]) -- Mapped to C button for Genesis
         
         start = bool_to_int(pad["Start"] or pad["S"])
         back  = bool_to_int(pad["Select"] or pad["Mode"])
