@@ -91,6 +91,31 @@ The scripts automatically detect the best resize mode based on the console:
 
 This configuration is saved in `dataset_config.json` by the Lua script and applied by the Python script.
 
+## Testing
+
+This project includes tests for both the Python and Lua components.
+
+### Python Tests
+The Python tests cover image preprocessing and dataset conversion logic.
+
+1.  Calculated dependencies are required (installed via `requirements.txt`), plus `pytest`.
+    ```bash
+    pip install pytest
+    ```
+2.  Run the tests:
+    ```bash
+    pytest tests/
+    ```
+
+### Lua Tests
+The Lua tests validation the input mapping logic and ensure the script structure is correct.
+
+1.  Requires a standard Lua 5.4 interpreter.
+2.  Run the tests:
+    ```bash
+    lua tests/test_export_dataset.lua
+    ```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -172,30 +172,42 @@ local function get_nitrogen_input()
 end
 
 -- 5. Main Loop
-console.log("Starting export...")
-console.log("Please ensure a movie (.bk2) is currently playing.")
+if not TEST_MODE then
+    console.log("Starting export...")
+    console.log("Please ensure a movie (.bk2) is currently playing.")
 
-while true do
-    local frame = emu.framecount()
-    
-    -- Capture Screenshot
-    -- Note: client.screenshot includes OSD if visible. 
-    -- Ideally use gui.clearGraphics() or configuration to hide HUD if needed.
-    client.screenshot(frames_full_path .. string.format("frame_%06d.png", frame))
-    
-    -- Capture Input
-    local input_data = get_nitrogen_input()
-    file:write(frame .. "," .. input_data .. "\n")
-    
-    -- Advance Frame
-    emu.frameadvance()
-    
-    -- Check for Movie End
-    if movie.isloaded() and movie.mode() == "FINISHED" then
-        file:close()
-        console.log("Export complete!")
-        console.log("Data saved to: " .. output_dir)
-        console.log("Now run the Python converter script.")
-        break
+    while true do
+        local frame = emu.framecount()
+        
+        -- Capture Screenshot
+        -- Note: client.screenshot includes OSD if visible. 
+        -- Ideally use gui.clearGraphics() or configuration to hide HUD if needed.
+        client.screenshot(frames_full_path .. string.format("frame_%06d.png", frame))
+        
+        -- Capture Input
+        local input_data = get_nitrogen_input()
+        file:write(frame .. "," .. input_data .. "\n")
+        
+        -- Advance Frame
+        emu.frameadvance()
+        
+        -- Check for Movie End
+        if movie.isloaded() and movie.mode() == "FINISHED" then
+            file:close()
+            console.log("Export complete!")
+            console.log("Data saved to: " .. output_dir)
+            console.log("Now run the Python converter script.")
+            break
+        end
     end
 end
+
+-- Export functions for testing
+return {
+    get_nitrogen_input = get_nitrogen_input,
+    bool_to_int = bool_to_int,
+    output_dir = output_dir,
+    frames_full_path = frames_full_path,
+    csv_full_path = csv_full_path
+}
+
