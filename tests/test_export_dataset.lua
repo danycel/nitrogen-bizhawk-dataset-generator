@@ -72,6 +72,9 @@ if type(app) ~= "table" then
     os.exit(1)
 end
 
+-- Clear TEST_MODE so LuaUnit doesn't try to run it as a test suite
+TEST_MODE = nil
+
 -- --- TESTS ---
 
 TestExportDataset = {}
