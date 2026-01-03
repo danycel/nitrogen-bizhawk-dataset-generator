@@ -190,7 +190,7 @@ def main():
         "--output", "-o", 
         type=Path, 
         default=None, 
-        help="Output Parquet filename (default: <input_dir>/actions_raw.parquet)"
+        help="Output Parquet filename (default: <input_dir>/train.parquet)"
     )
     
     parser.add_argument(
@@ -207,7 +207,7 @@ def main():
     if args.output:
         output_file = args.output.resolve()
     else:
-        output_file = input_dir / "actions_raw.parquet"
+        output_file = input_dir / "train.parquet"
         
     if not input_dir.exists():
         logger.error(f"Input directory does not exist: {input_dir}")

@@ -56,7 +56,7 @@ Once the Lua export is complete, use the Python script to package the data and p
 ```bash
 # Default usage 
 # Reads from 'nitrogen_dataset/'
-# Saves parquet to 'nitrogen_dataset/actions_raw.parquet' (images embedded)
+# Saves parquet to 'nitrogen_dataset/train.parquet' (images embedded)
 python convert_dataset.py
 
 # Specify custom input directory
@@ -67,7 +67,7 @@ python convert_dataset.py --skip-images
 ```
 
 3.  The output will contain:
-    *   `actions_raw.parquet`: The single-file dataset containing both actions and embedded images (ready for training).
+    *   `train.parquet`: The single-file dataset containing both actions and embedded images (ready for training).
 
 ### 🐳 Functionality via Docker
 
@@ -83,7 +83,7 @@ You can also run the converter using Docker, which handles all dependencies (inc
     
     ```bash
     # Run against the 'nitrogen_dataset' folder in your current directory
-    docker run --rm -v $(pwd)/nitrogen_dataset:/app/dataset nitrogen-converter --input /app/dataset --output /app/dataset/actions_raw.parquet
+    docker run --rm -v $(pwd)/nitrogen_dataset:/app/dataset nitrogen-converter --input /app/dataset --output /app/dataset/train.parquet
     ```
 
 
