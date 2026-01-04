@@ -121,6 +121,26 @@ The Lua tests validation the input mapping logic and ensure the script structure
     lua tests/test_export_dataset.lua
     ```
 
+## 🌍 Generated Datasets
+
+Check out a real-world example of a dataset created with this tool:
+
+### 🎮 [Felix the Cat (NES) - World 1](https://huggingface.co/datasets/artryazanov/nitrogen-bizhawk-nes-felix-the-cat-world-1)
+
+A complete gameplay dataset of World 1, formatted for training vision-to-action models like NitroGen.
+
+*   **Game**: Felix the Cat (NES)
+*   **Format**: Parquet (images + controller inputs)
+*   **Size**: ~25,000 frames
+*   **Source**: Recorded via BizHawk, processed with this generator.
+
+```python
+from datasets import load_dataset
+
+# Load the dataset directly from Hugging Face
+dataset = load_dataset("artryazanov/nitrogen-bizhawk-nes-felix-the-cat-world-1", split="train")
+```
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
