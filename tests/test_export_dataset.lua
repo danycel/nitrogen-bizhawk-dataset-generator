@@ -107,8 +107,8 @@ TestExportDataset = {}
         
         local result = app.get_nitrogen_input("SNES")
         -- Expected: S,E,W,N, L,R, LT,RT, St,Bk, Up,Dn,Lf,Rt, X,Y
-        -- SNES: S=B(1), E=A(0), W=Y(1), N=X(0)
-        local expected = "1,0,1,0,1,0,0,0,1,0,1,0,0,1,0.0,0.0"
+        -- SNES: S=B(1), E=A(0), W=Y(1), N=X(0), Up->stick_y=-1.0, Right->stick_x=1.0
+        local expected = "1,0,1,0,1,0,0,0,1,0,0,0,0,0,1.0,-1.0"
         lu.assertEquals(result, expected)
     end
 
@@ -123,8 +123,8 @@ TestExportDataset = {}
         end
         
         local result = app.get_nitrogen_input("NES")
-        -- S=1, E=0, W=0, N=0, St=1, Bk=1, Lf=1
-        local expected = "1,0,0,0,0,0,0,0,1,1,0,0,1,0,0.0,0.0"
+        -- S=0 (A=false), E=0, W=1 (B=true), N=0, St=1, Bk=1, Left->stick_x=-1.0
+        local expected = "0,0,1,0,0,0,0,0,1,1,0,0,0,0,-1.0,0.0"
         lu.assertEquals(result, expected)
     end
 
