@@ -107,6 +107,7 @@ local function get_nitrogen_input(system_id)
     local l_sh, r_sh, l_tr, r_tr = 0, 0, 0, 0
     local start, back = 0, 0
     local up, down, left, right = 0, 0, 0, 0
+    local stick_x, stick_y = 0.0, 0.0
     
     -- CHANGE 2: Add "P1 " prefix to all buttons
     
@@ -122,12 +123,13 @@ local function get_nitrogen_input(system_id)
         
         start = bool_to_int(pad["P1 Start"])
         back  = bool_to_int(pad["P1 Select"])
+
+        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = 1.0 end
+        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = -1.0 end
         
-        up    = bool_to_int(pad["P1 Up"])
-        down  = bool_to_int(pad["P1 Down"])
-        left  = bool_to_int(pad["P1 Left"])
-        right = bool_to_int(pad["P1 Right"])
-        
+        if pad["P1 Right"] and not pad["P1 Left"] then stick_x = 1.0 end
+        if pad["P1 Left"] and not pad["P1 Right"] then stick_x = -1.0 end
+
     elseif system_id == "NES" then
         -- NES Layout:
         south = bool_to_int(pad["P1 A"])
@@ -135,12 +137,13 @@ local function get_nitrogen_input(system_id)
         
         start = bool_to_int(pad["P1 Start"])
         back  = bool_to_int(pad["P1 Select"])
+
+        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = 1.0 end
+        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = -1.0 end
         
-        up    = bool_to_int(pad["P1 Up"])
-        down  = bool_to_int(pad["P1 Down"])
-        left  = bool_to_int(pad["P1 Left"])
-        right = bool_to_int(pad["P1 Right"])
-        
+        if pad["P1 Right"] and not pad["P1 Left"] then stick_x = 1.0 end
+        if pad["P1 Left"] and not pad["P1 Right"] then stick_x = -1.0 end
+
     else
         -- GENERIC / FALLBACK
         south = bool_to_int(pad["P1 A"]) 
@@ -156,12 +159,12 @@ local function get_nitrogen_input(system_id)
         right = bool_to_int(pad["P1 Right"])
     end
 
-    -- Stick X/Y logic remains 0.0 for NES/SNES
-    return string.format("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,0.0,0.0",
+    return string.format("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%.1f,%.1f",
         south, east, west, north,
         l_sh, r_sh, l_tr, r_tr,
         start, back,
-        up, down, left, right
+        up, down, left, right,
+        stick_x, stick_y
     )
 end
 
