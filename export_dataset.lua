@@ -124,8 +124,8 @@ local function get_nitrogen_input(system_id)
         start = bool_to_int(pad["P1 Start"])
         back  = bool_to_int(pad["P1 Select"])
 
-        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = 1.0 end
-        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = -1.0 end
+        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = -1.0 end
+        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = 1.0 end
         
         if pad["P1 Right"] and not pad["P1 Left"] then stick_x = 1.0 end
         if pad["P1 Left"] and not pad["P1 Right"] then stick_x = -1.0 end
@@ -138,8 +138,8 @@ local function get_nitrogen_input(system_id)
         start = bool_to_int(pad["P1 Start"])
         back  = bool_to_int(pad["P1 Select"])
 
-        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = 1.0 end
-        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = -1.0 end
+        if pad["P1 Up"] and not pad["P1 Down"] then stick_y = -1.0 end
+        if pad["P1 Down"] and not pad["P1 Up"] then stick_y = 1.0 end
         
         if pad["P1 Right"] and not pad["P1 Left"] then stick_x = 1.0 end
         if pad["P1 Left"] and not pad["P1 Right"] then stick_x = -1.0 end
