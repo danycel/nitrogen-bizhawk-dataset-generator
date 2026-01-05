@@ -130,9 +130,8 @@ local function get_nitrogen_input(system_id)
         
     elseif system_id == "NES" then
         -- NES Layout:
-        -- B -> South, A -> East
-        south = bool_to_int(pad["P1 B"]) 
-        east  = bool_to_int(pad["P1 A"]) 
+        south = bool_to_int(pad["P1 A"])
+        west = bool_to_int(pad["P1 B"])
         
         start = bool_to_int(pad["P1 Start"])
         back  = bool_to_int(pad["P1 Select"])
